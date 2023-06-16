@@ -19,17 +19,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zI2-g3-wPa">
                                 <rect key="frame" x="8" y="124" width="120" height="125"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H4b-40-kei">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="H4b-40-kei">
                                         <rect key="frame" x="5" y="45.666666666666657" width="110" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="110" id="MWh-TL-RRn"/>
                                             <constraint firstAttribute="height" constant="34" id="dAg-MQ-MCm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="REI-Yc-HSO"/>
                                     <constraint firstAttribute="height" constant="125" id="hSa-n4-Ata"/>
@@ -37,26 +37,13 @@
                                     <constraint firstItem="H4b-40-kei" firstAttribute="centerX" secondItem="zI2-g3-wPa" secondAttribute="centerX" id="nbE-PN-XEi"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U44-xq-7bc">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U44-xq-7bc">
                                 <rect key="frame" x="135" y="124" width="120" height="125"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XaV-2e-H6F">
-                                        <rect key="frame" x="5" y="45.666666666666657" width="110" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="110" id="8Bg-1W-FFX"/>
-                                            <constraint firstAttribute="height" constant="34" id="bfY-vJ-f7d"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="7l6-4e-Tl7"/>
                                     <constraint firstAttribute="width" constant="120" id="Dx5-4D-eRd"/>
                                     <constraint firstAttribute="height" constant="125" id="LK8-Mg-pOn"/>
-                                    <constraint firstItem="XaV-2e-H6F" firstAttribute="centerX" secondItem="U44-xq-7bc" secondAttribute="centerX" id="QaZ-6i-AKn"/>
-                                    <constraint firstItem="XaV-2e-H6F" firstAttribute="centerY" secondItem="U44-xq-7bc" secondAttribute="centerY" id="Sqv-bE-rNH"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="bcD-8v-Dpo"/>
                                 </constraints>
                             </view>
@@ -73,7 +60,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="AFJ-SN-vfU"/>
                                     <constraint firstItem="eYl-hL-tKc" firstAttribute="centerX" secondItem="pob-gQ-jlY" secondAttribute="centerX" id="DZz-G1-WEV"/>
@@ -88,12 +75,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Zxo-7P-z9E"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="RF0-mF-VfC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="baG-7S-utB"/>
+                                </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SuL-Sq-7aT">
                                 <rect key="frame" x="135" y="261" width="120" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="2Vc-BN-9Np"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="CVO-Gw-KUm"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Srq-9A-kfk"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GB-20-c9d">
                                 <rect key="frame" x="280.66666666666669" y="319" width="85" height="34.333333333333314"/>
@@ -130,7 +125,6 @@
                         <outlet property="fromTextField" destination="H4b-40-kei" id="FgO-84-o5j"/>
                         <outlet property="resultLabewl" destination="eYl-hL-tKc" id="vRl-O8-6nG"/>
                         <outlet property="toPicker" destination="SuL-Sq-7aT" id="FKv-nU-lH6"/>
-                        <outlet property="toTextField" destination="XaV-2e-H6F" id="jDt-97-mbv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -144,6 +138,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

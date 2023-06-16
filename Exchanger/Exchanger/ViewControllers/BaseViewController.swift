@@ -7,7 +7,13 @@ import UIKit
 class BaseViewController: UIViewController {
     
     private let activityIndicatorView = UIActivityIndicatorView(style: .medium)
+    private(set) var activeTextField: UITextField?
 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     func show(text: String) {
         let alert = UIAlertController(
             title: "",
@@ -21,6 +27,7 @@ class BaseViewController: UIViewController {
         )
         present(alert, animated: true, completion: nil)
     }
+    
     
     func show(error: TError) {
         show(text: error.localizedDescription)

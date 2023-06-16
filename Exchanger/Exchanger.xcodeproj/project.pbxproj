@@ -18,7 +18,9 @@
 		CE0E71C92A3C4D77003B4399 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E71C82A3C4D77003B4399 /* ResultModel.swift */; };
 		CE0E71CD2A3C5063003B4399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E71CB2A3C5063003B4399 /* ViewController.swift */; };
 		CE0E71CE2A3C5063003B4399 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E71CC2A3C5063003B4399 /* BaseViewController.swift */; };
-		CE0E71D02A3C51D3003B4399 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E71CF2A3C51D3003B4399 /* Exchange.swift */; };
+		CE0E71D22A3C5C53003B4399 /* ChangeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E71D12A3C5C53003B4399 /* ChangeModel.swift */; };
+		CE0E71D52A3C5EA9003B4399 /* String+RangeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E71D42A3C5EA9003B4399 /* String+RangeConversion.swift */; };
+		CE0E71D82A3C63BA003B4399 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E71D72A3C63BA003B4399 /* Exchange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +37,9 @@
 		CE0E71C82A3C4D77003B4399 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		CE0E71CB2A3C5063003B4399 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE0E71CC2A3C5063003B4399 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		CE0E71CF2A3C51D3003B4399 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
+		CE0E71D12A3C5C53003B4399 /* ChangeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeModel.swift; sourceTree = "<group>"; };
+		CE0E71D42A3C5EA9003B4399 /* String+RangeConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+RangeConversion.swift"; sourceTree = "<group>"; };
+		CE0E71D72A3C63BA003B4399 /* Exchange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 		CE0E71AB2A3C49A7003B4399 /* Exchanger */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E71D62A3C63BA003B4399 /* UseCase */,
+				CE0E71D32A3C5EA9003B4399 /* Ext */,
 				CE0E71AC2A3C49A7003B4399 /* AppDelegate.swift */,
 				CE0E71AE2A3C49A7003B4399 /* SceneDelegate.swift */,
 				CE0E71CA2A3C5063003B4399 /* ViewControllers */,
@@ -95,7 +101,7 @@
 			children = (
 				CE0E71C62A3C4A3D003B4399 /* Currency.swift */,
 				CE0E71C82A3C4D77003B4399 /* ResultModel.swift */,
-				CE0E71CF2A3C51D3003B4399 /* Exchange.swift */,
+				CE0E71D12A3C5C53003B4399 /* ChangeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -107,6 +113,22 @@
 				CE0E71CC2A3C5063003B4399 /* BaseViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE0E71D32A3C5EA9003B4399 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E71D42A3C5EA9003B4399 /* String+RangeConversion.swift */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
+		CE0E71D62A3C63BA003B4399 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E71D72A3C63BA003B4399 /* Exchange.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,10 +207,12 @@
 				CE0E71C72A3C4A3D003B4399 /* Currency.swift in Sources */,
 				CE0E71AF2A3C49A7003B4399 /* SceneDelegate.swift in Sources */,
 				CE0E71CD2A3C5063003B4399 /* ViewController.swift in Sources */,
+				CE0E71D82A3C63BA003B4399 /* Exchange.swift in Sources */,
 				CE0E71CE2A3C5063003B4399 /* BaseViewController.swift in Sources */,
 				CE0E71C92A3C4D77003B4399 /* ResultModel.swift in Sources */,
+				CE0E71D52A3C5EA9003B4399 /* String+RangeConversion.swift in Sources */,
 				CE0E71C32A3C49F1003B4399 /* NetworkLoader.swift in Sources */,
-				CE0E71D02A3C51D3003B4399 /* Exchange.swift in Sources */,
+				CE0E71D22A3C5C53003B4399 /* ChangeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

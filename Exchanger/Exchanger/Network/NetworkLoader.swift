@@ -8,8 +8,8 @@ import Foundation
 class NetworkLoader {
     
     
-    func change(from: Currency, to: Currency, amount: Double) async throws -> Result {
-        let path = makePath(from: from, to: to, amount: amount)
+    func change(model: ChangeModel) async throws -> Result {
+        let path = makePath(model: model)
         guard let url = URL(string: path) else {
             throw TError.wrongURL
         }
@@ -22,10 +22,10 @@ class NetworkLoader {
         return result
     }
     
-    private func makePath(from: Currency, to: Currency, amount: Double) -> String {
+    private func makePath(model: ChangeModel) -> String {
         let key = "df485b82aade27b84231b6b91adf27e0"
-        let path = "https://api.exchangeratesapi.io/v1/convert"
-        return path + "?" + "access_key=\(key)" + "&from=\(from.rawValue)" + "&to=\(to.rawValue)" + "&amount=\(amount)"
+        let path = "http://api.exchangeratesapi.io/v1/convert"
+        return path + "?" + "access_key=\(key)" + "&from=\(model.from.rawValue)" + "&to=\(model.to.rawValue)" + "&amount=\(model.amount)"
     }
     
 }
