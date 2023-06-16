@@ -23,7 +23,7 @@ class NetworkLoader {
     
     private func makePath(model: ChangeModel) -> String {
         let key = "df485b82aade27b84231b6b91adf27e0"
-        let path = "http://api.exchangeratesapi.io/v1/convert"
+        let path = "https://api.exchangeratesapi.io/v1/convert"
         return path + "?" + "access_key=\(key)" + "&from=\(model.from.rawValue)" + "&to=\(model.to.rawValue)" + "&amount=\(model.amount)"
     }
     
@@ -31,4 +31,5 @@ class NetworkLoader {
 
 //https://api.exchangeratesapi.io/v1/convert?access_key=df485b82aade27b84231b6b91adf27e0&from=USD&to=GBP&amount=33.0
 //https://api.exchangeratesapi.io/v1/convert?access_key = API_KEY&from=GBP&to=JPY&amount=25
+
 
