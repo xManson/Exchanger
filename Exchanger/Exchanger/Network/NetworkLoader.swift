@@ -31,3 +31,4 @@ class NetworkLoader {
 
 //https://api.exchangeratesapi.io/v1/convert?access_key=df485b82aade27b84231b6b91adf27e0&from=USD&to=GBP&amount=33.0
 //https://api.exchangeratesapi.io/v1/convert?access_key = API_KEY&from=GBP&to=JPY&amount=25
+
